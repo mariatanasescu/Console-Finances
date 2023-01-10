@@ -2,41 +2,34 @@
 
 Week 4 java challenge
 
-# 
+## Description
 
-The total number of months included in the dataset. DONE
+We are given an array with dates and amounts or corresponding profits and asked to perform various tasks on the array.
 
+## Whole Task
+
+Instructions
+Create a new GitHub repo called Console-Finances. Then, clone it to your computer.
+
+Copy the starter files into your local git repository.
+
+You have been given a dataset composed of arrays with two fields: Date and Profit/Losses.
+
+Your task is to write JavaScript code that analyzes the records to calculate each of the following:
+
+The total number of months included in the dataset.
 
 The net total amount of Profit/Losses over the entire period.
-# select all the second items of each item in the array 
-## How?? 
-## moneyList= finances[0][1] + 
-# make the sum of all items
-# (let i = 0, i < finances.length, i++)
-
-fu
 
 The average of the changes in Profit/Losses over the entire period.
-# make the difference of all amounts two by two
-# add all differences together and divide them by the number of differences which is leength-1 I think
 
+You will need to track what the total change in profits is from month to month and then find the average.
 
-
-You will need to track what the total change in profits are from month to month and then find the average.
 (Total/Number of months)
 
-
-
 The greatest increase in profits (date and amount) over the entire period.
-# find the largest difference
-# return the time and amount
 
 The greatest decrease in losses (date and amount) over the entire period.
-# find the differences that resunt in negative amounts
-# pick the smallest amount
-# return time and amount
-
-
 
 When you open your code in the browser your resulting analysis should look similar to the following:
 
@@ -48,5 +41,12 @@ Average  Change: $-2315.12
 Greatest Increase in Profits: Feb-2012 ($1926159)
 Greatest Decrease in Profits: Sep-2013 ($-2196167)
 
+## Licence
 
-Your final code should print the analysis to the console.
+None
+
+## New Concepts Learned
+
+xxx = xxx.toFixed(2) => rounds up to first twwo decimals
+
+let maxXxx = Math.max(...xxx); => Math.max picks the largest of an array of numbers and ... spreads out an array so to speak
