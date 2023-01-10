@@ -88,5 +88,58 @@ let finances = [
     ];
 
     let totalMonths = (finances.length);
-    console.log(totalMonths);
-    
+    console.log("Total Months: " + totalMonths);
+
+    function findSum() {
+    let sum = 0
+    for (let i = 0; i < finances.length; i++) {
+        sum += finances[i][1]
+    }
+    console.log("Total: $" + sum);
+    }
+    findSum()
+
+    function findAverageChange() {
+        let changes = [];
+        for (let i = 1; i <finances.length; i++) {
+            let monthChange = finances[i][1] - finances[i-1][1]
+            changes.push(monthChange)
+        }
+        
+        let changesSum = 0;
+        for (let i = 0; i < changes.length; i++) {
+            changesSum += changes[i];
+        }
+        
+        let average = changesSum / changes.length;
+        average = average.toFixed(2)
+        console.log("Average change: $" + average)
+
+        // let maxChange = Math.max(...changes);
+        // let minChange = Math.min(...changes);
+        // console.log(maxChange, minChange);
+    }
+    findAverageChange()
+
+    function findBiggestChanges() {
+        let maxChange = finances[1][1] - finances[0][1];
+        let minChange = finances[1][1] - finances[0][1];
+        let maxMonth = finances[1][0];
+        let minMonth = finances[1][0]
+
+        for (let i = 1; i <finances.length; i++) {
+            let monthChange = finances[i][1] - finances[i-1][1]
+            let month = finances[i][0]
+            if (monthChange > maxChange)  {
+                maxChange = monthChange;
+                maxMonth = month;
+            }
+            if (monthChange < minChange) {
+                minChange = monthChange;
+                minMonth = month;
+            }
+        }
+console.log("Greatest Increase In Profits: " + maxMonth + " " + "($" + maxChange + ")");
+console.log("Greatest Decrease In Profits: " + minMonth + " " + "($" + minChange + ")");
+    }
+    findBiggestChanges()
